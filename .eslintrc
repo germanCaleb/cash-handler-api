@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-base",
+    "prettier"
+  ],
+  "rules": { 
+    "brace-style": ["error", "stroustrup"],
+    "comma-dangle": ["error", "never"],
+    "no-unused-vars": ["warn"],
+    "no-var": ["off"],
+    "one-var": ["off"],
+    "prettier/prettier": 2
+  }
+}

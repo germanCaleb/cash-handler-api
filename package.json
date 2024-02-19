@@ -1,0 +1,58 @@
+{
+  "name": "cash-handler-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "npx nodemon",
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node build/index.js",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "prettier-format": "prettier --config .prettierrc \"src/**/*.ts\" --write",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2"
+  },
+    "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "./",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "src/(.*)/(.*)": "<rootDir>/src/$1/$2"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "testTimeout": 1000000
+  },
+  "lint-staged": {
+    "*.ts": "npx prettier --write"
+  }
+}
