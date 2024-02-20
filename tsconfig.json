@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "ES6",
+    "target": "ESNext",
     "module": "CommonJS",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "lib": ["es6"],
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "baseUrl": "./src"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
