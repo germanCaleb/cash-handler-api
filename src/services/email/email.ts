@@ -15,7 +15,7 @@ export const sendVerificationEmail = async (to: string, userKey: string) => {
     <h1>Hello, Are You Ready To Start Your Journey</h1>
     <h2>WIP</h2>
     <p class="child-element"> please verify your account by clicking the button bellow</p>
-        <a href="http://localhost:5000/user/verify/${userKey}" style="            
+        <a href="http://localhost:3000/user/verify/${userKey}" style="            
           background-color: #4caf50; /* Green color */
             border: none;
             color: white;
@@ -36,7 +36,7 @@ export const sendResetEmail = async (to: string) => {
     <h1>Password Reset</h1>
     <h2>WIP</h2>
     <p class="child-element"> please reset password by clicking the button bellow</p>
-        <a href="http://localhost:5173/resetpassword" style="            
+        <a href="http://localhost:3000/resetpassword" style="            
           background-color: #4caf50; /* Green color */
             border: none;
             color: white;

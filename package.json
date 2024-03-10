@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "cross-env NODE_ENV=development npx nodemon",
     "build": "rimraf ./build && tsc",
     "start": "npm run build && node build/index.js",
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
     "prettier-format": "prettier --config .prettierrc \"src/**/*.ts\" --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +22,7 @@
     "dotenv": "^16.4.4",
     "dotenv-flow": "^4.1.0",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
     "nodemailer": "^6.9.10"
   },
   "devDependencies": {
@@ -29,6 +30,7 @@
     "@types/body-parser": "^1.19.5",
     "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/nodemailer": "^6.4.14",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.0",
