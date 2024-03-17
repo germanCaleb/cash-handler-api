@@ -81,7 +81,7 @@ export const verifyUserPassword = async (
 };
 
 export const createAndSignUserToken = (user: User) => {
-  const expiresIn = 30; // expires in 30 min
+  const expiresIn = 30 * 60; // expires in 30 min
 
   return jwt.sign(
     {
